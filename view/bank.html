@@ -1,0 +1,221 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="content-security-policy|content-type|default-style|refresh"
+    />
+    <title>Quotations App | Bank Page</title>
+    <link
+      rel="icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/bank.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/app.css"
+    />
+  </head>
+  <body>
+    <div class="topnav">
+      <p>Quotations App</p>
+      <div class="topnavcenter">
+        <ul>
+          <li>
+            <a href="/view/home.html">หน้าหลัก</a>
+          </li>
+          <li>
+            <a href="/view/company.html"
+              >ข้อมูลบริษัท</a
+            >
+          </li>
+          <li>
+            <a href="/view/bank.html"
+              >ข้อมูลธนาคาร</a
+            >
+          </li>
+          <li>
+            <a href="/view/customer.html"
+              >ข้อมูลลูกค้า</a
+            >
+          </li>
+          <li>
+            <a href="/view/quotation.html"
+              >ทำใบเสนอราคา</a
+            >
+          </li>
+          <li>
+            <a href="/view/quotationreport.html"
+              >รายงานใบเสนอราคา</a
+            >
+          </li>
+          <li>
+            <a href="#" id="logout">ออกจากระบบ</a>
+          </li>
+        </ul>
+      </div>
+      <p>Admin</p>
+    </div>
+
+    <div class="main-secondary">
+      <nav>
+        <p>Bank List</p>
+        <button type="button" id="addbank">
+          New Bank
+        </button>
+      </nav>
+    </div>
+
+    <div class="main-table">
+      <div
+        id="modalcontainer"
+        class="modalcontainer"
+      >
+        <div id="modal-content" class="card">
+          <form
+            class="addbankform"
+            autocomplete="off"
+          >
+            <nav>
+              <label href="#" for="closemodal"
+                >เพิ่มข้อมูล</label
+              >
+              <button
+                id="closemodal"
+                type="button"
+              >
+                X
+              </button>
+            </nav>
+
+            <table class="modaltable">
+              <tr>
+                <td>
+                  <label for="bankname"
+                    >ชื่อธนาคาร</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="bankname"
+                    id="bankname"
+                    required
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="bankbranch"
+                    >สาขา</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="bankbranch"
+                    name="bankbranch"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="accounttype"
+                    >ประเภทบัญชี</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="accounttype"
+                    id="accounttype"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="accountname"
+                    >ชื่อบัญชี</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="accountname"
+                    id="accountname"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="accountnumber"
+                    >เลขบัญชี</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    name="accountnumber"
+                    id="accountnumber"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+            </table>
+            <nav>
+              <button
+                type="submit"
+                id="btnSaveBank"
+              >
+                บันทึก
+              </button>
+              <button
+                type="button"
+                id="btnClearBank"
+              >
+                ล้างข้อมูล
+              </button>
+            </nav>
+          </form>
+        </div>
+      </div>
+
+      <table class="orgTable">
+        <thead>
+          <th>No.</th>
+          <th>Actions</th>
+          <th>ชื่อธนาคาร</th>
+          <th>สาขา</th>
+          <th>ประเภทบัญชี</th>
+          <th>ชื่อบัญชี</th>
+          <th>เลขบัญชี</th>
+        </thead>
+        <tbody
+          id="table-body"
+          class="table-body"
+        ></tbody>
+      </table>
+    </div>
+
+    <span id="versionnumber"
+      >quotations app v.1.21102567</span
+    >
+
+    <script src="/scripts/logout.js"></script>
+    <script src="/scripts/bank.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+/* report  */
+#logo {
+  background-image: url("../images/logo-page.jpg");
+}
+
+.main {
+  text-align: center;
+}
+
+.main select {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #dd9898;
+  outline: none;
+  color: #444;
+  border: none;
+  padding: 10px;
+}
+
+.main-layout {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-layout div {
+  display: flex;
+}
+
+.main-layout div p {
+  opacity: 0.8;
+  margin-right: 5px;
+}
+
+.main-layout div button {
+  padding: 12px 8px;
+  background-color: #dd9898;
+  border-radius: 3px;
+  border: none;
+  opacity: 0.8;
+}
+
+.main-layout div button:hover {
+  opacity: 0.8;
+  background-color: #dd9898;
+  color: #f2f2f2;
+}
